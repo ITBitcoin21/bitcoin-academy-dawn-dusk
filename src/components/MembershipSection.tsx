@@ -1,9 +1,16 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Users, Zap } from "lucide-react";
+import { Users, Zap, UserCheck } from "lucide-react";
+import { useTelegramStats } from "@/hooks/useTelegramStats";
 
 const MembershipSection = () => {
+  const { memberCount, onlineCount, loading } = useTelegramStats();
+
+  const handleJoinTelegram = () => {
+    window.open('https://t.me/+PjMkLI2DZIthYmYx', '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <section className="py-20 bg-gradient-to-br from-bitcoin-500 via-bitcoin-600 to-bitcoin-700 relative overflow-hidden">
       {/* Background Pattern */}
@@ -24,7 +31,7 @@ const MembershipSection = () => {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 <div className="flex items-center justify-center p-6 bg-bitcoin-50 rounded-2xl">
                   <div className="text-center">
                     <div className="flex justify-center mb-4">
@@ -32,8 +39,24 @@ const MembershipSection = () => {
                         <Users className="w-8 h-8 text-white" />
                       </div>
                     </div>
-                    <h3 className="text-2xl font-bold text-bitcoin-700 mb-2">90</h3>
-                    <p className="text-bitcoin-600 font-semibold">Miembros Activos</p>
+                    <h3 className="text-2xl font-bold text-bitcoin-700 mb-2">
+                      {loading ? '...' : memberCount}
+                    </h3>
+                    <p className="text-bitcoin-600 font-semibold">Miembros Totales</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-center p-6 bg-green-50 rounded-2xl">
+                  <div className="text-center">
+                    <div className="flex justify-center mb-4">
+                      <div className="p-3 bg-green-500 rounded-full">
+                        <UserCheck className="w-8 h-8 text-white" />
+                      </div>
+                    </div>
+                    <h3 className="text-2xl font-bold text-green-700 mb-2">
+                      {loading ? '...' : onlineCount}
+                    </h3>
+                    <p className="text-green-600 font-semibold">Miembros Online</p>
                   </div>
                 </div>
 
@@ -52,6 +75,7 @@ const MembershipSection = () => {
 
               <div className="text-center">
                 <Button 
+                  onClick={handleJoinTelegram}
                   size="lg" 
                   className="bg-bitcoin-500 hover:bg-bitcoin-600 text-white px-12 py-4 text-lg font-semibold rounded-full transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >

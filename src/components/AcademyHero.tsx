@@ -25,12 +25,14 @@ const AcademyHero = () => {
             />
           </div>
           <nav className="hidden md:flex space-x-8 text-white">
-            <a href="#" className="hover:text-bitcoin-200 transition-colors">Inicio</a>
-            <a href="#" className="hover:text-bitcoin-200 transition-colors">Herramientas</a>
-            <a href="#" className="hover:text-bitcoin-200 transition-colors">Minería</a>
-            <a href="#" className="hover:text-bitcoin-200 transition-colors">Tienda</a>
-            <a href="#" className="hover:text-bitcoin-200 transition-colors">Blog</a>
-            <a href="#" className="bg-white text-bitcoin-600 px-4 py-2 rounded-full font-semibold hover:bg-bitcoin-50 transition-colors">Academia</a>
+            <a 
+              href="https://21bitcoinacademy.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-white text-bitcoin-600 px-4 py-2 rounded-full font-semibold hover:bg-bitcoin-50 transition-colors"
+            >
+              Página de inicio de 21Bitcoin Academy
+            </a>
           </nav>
         </div>
       </header>

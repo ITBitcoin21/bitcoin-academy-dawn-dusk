@@ -6,6 +6,15 @@ export const useTimeBasedTheme = () => {
 
   useEffect(() => {
     const updateTheme = () => {
+      // Verificar si hay una preferencia manual guardada
+      const savedTheme = localStorage.getItem('theme-preference');
+      
+      if (savedTheme && savedTheme !== 'auto') {
+        // Si hay una preferencia manual, no hacer nada (el ThemeToggle se encarga)
+        return;
+      }
+
+      // Solo aplicar tema automático si está en modo 'auto' o no hay preferencia
       const now = new Date();
       const hour = now.getHours();
       
@@ -25,8 +34,13 @@ export const useTimeBasedTheme = () => {
     // Actualizar tema inmediatamente
     updateTheme();
 
-    // Actualizar cada minuto
-    const interval = setInterval(updateTheme, 60000);
+    // Actualizar cada minuto solo si está en modo automático
+    const interval = setInterval(() => {
+      const savedTheme = localStorage.getItem('theme-preference');
+      if (!savedTheme || savedTheme === 'auto') {
+        updateTheme();
+      }
+    }, 60000);
 
     return () => clearInterval(interval);
   }, []);
