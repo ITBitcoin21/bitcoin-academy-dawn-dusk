@@ -3,7 +3,6 @@ import { useTimeBasedTheme } from "@/hooks/useTimeBasedTheme";
 import AcademyHero from "@/components/AcademyHero";
 import BitcoinFeatures from "@/components/BitcoinFeatures";
 import LearningResources from "@/components/LearningResources";
-import MembershipSection from "@/components/MembershipSection";
 import AcademyFooter from "@/components/AcademyFooter";
 import ThemeToggle from "@/components/ThemeToggle";
 
@@ -16,7 +15,6 @@ const Index = () => {
       <AcademyHero />
       <BitcoinFeatures />
       <LearningResources />
-      <MembershipSection />
       <AcademyFooter />
     </div>
   );

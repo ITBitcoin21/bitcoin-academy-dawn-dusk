@@ -7,7 +7,7 @@ const LearningResources = () => {
     {
       icon: Eye,
       title: "Privacidad",
-      description: "La privacidad es un derecho, por eso nos enfocamos en ayudarte a entender su importancia y guiarte para proteger tus datos e información sensible.",
+      description: "La privacidad es un derecho, por eso nos enfocamos en ayudarte a entender su importancia y guiarte para proteger a ti y tus bitcoins.",
       color: "from-blue-500 to-blue-600"
     },
     {

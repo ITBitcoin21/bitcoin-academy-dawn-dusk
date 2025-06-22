@@ -27,12 +27,12 @@ const BitcoinFeatures = () => {
     {
       icon: Pickaxe,
       title: "Minería PoW",
-      description: "Proceso por el cual se procesan transacciones y se emiten nuevos bitcoins."
+      description: "Trabajo por el cual se procesan transacciones y se emiten nuevos bitcoins."
     },
     {
       icon: Shield,
       title: "Seguridad Criptográfica",
-      description: "Utiliza criptografía avanzada para proteger las transacciones y la red."
+      description: "Bitcoin utiliza algoritmos como SHA-256 y firmas digitales para blindar su red, haciéndola imposible de hackear y la más segura globalmente."
     }
   ];
 
