@@ -31,7 +31,7 @@ const AcademyHero = () => {
         <div className="container mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <img 
-              src="/lovable-uploads/e8166443-33b7-4a58-8bdc-ab6b3b3a83a2.png" 
+              src={isDarkMode ? "/lovable-uploads/710a9cf1-694f-4344-95c1-7a113cd48d7d.png" : "/lovable-uploads/3dc56ca1-6898-45d5-8ec8-0ee5e26c857c.png"}
               alt="21 Bitcoin Academy" 
               className="h-12 w-auto"
             />
@@ -115,9 +115,6 @@ const AcademyHero = () => {
                   >
                     Unirse a la Academia
                   </Button>
-                  <p className="text-sm text-gray-500 mt-4">
-                    * Acceso de por vida con un solo pago
-                  </p>
                 </div>
               </CardContent>
             </Card>
