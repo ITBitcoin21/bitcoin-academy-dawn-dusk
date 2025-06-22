@@ -31,7 +31,7 @@ const AcademyHero = () => {
         <div className="container mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <img 
-              src={isDarkMode ? "/lovable-uploads/710a9cf1-694f-4344-95c1-7a113cd48d7d.png" : "/lovable-uploads/3dc56ca1-6898-45d5-8ec8-0ee5e26c857c.png"}
+              src={isDarkMode ? "/lovable-uploads/710a9cf1-694f-4344-95c1-7a113cd48d7d.png" : "/lovable-uploads/5e1efb3b-2d53-425b-b535-8f0573028b1d.png"}
               alt="21 Bitcoin Academy" 
               className="h-12 w-auto"
             />
@@ -53,7 +53,7 @@ const AcademyHero = () => {
       <div className="relative z-10 container mx-auto px-6 pt-20 pb-32">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Aprende sobre <span className="text-bitcoin-200 animate-pulse">Bitcoin</span>
+            Aprende sobre <span className="text-bitcoin-200 bg-gradient-to-r from-bitcoin-200 to-bitcoin-100 bg-clip-text text-transparent animate-pulse">Bitcoin</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-bitcoin-100">
             Descubre cómo Bitcoin está transformando el mundo financiero y por qué es considerado una revolución tecnológica y económica.
@@ -101,7 +101,7 @@ const AcademyHero = () => {
                           <Zap className="w-8 h-8 text-white" />
                         </div>
                       </div>
-                      <h3 className="text-2xl font-bold text-green-700 mb-2">Recursos Educativos</h3>
+                      <h3 className="text-2xl font-bold text-green-700 mb-2">Cursos Educativos</h3>
                       <p className="text-green-600 font-semibold">Herramientas y productos premium</p>
                     </div>
                   </div>
